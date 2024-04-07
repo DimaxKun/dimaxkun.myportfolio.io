@@ -1,7 +1,7 @@
 :root {
   --main-white: #f0f0f0;
-  --main-red: #b45e69;
-  --main-blue: #4f7be4;
+  --main-red: #00203FFF;
+  --main-blue: #ADEFD1FF;
   --main-gray: #303841;
 }
 
@@ -17,9 +17,9 @@
 }
 
 html {
+  /* scroll-behavior: smooth; */
   box-sizing: border-box;
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 @media (max-width: 75em) {
@@ -46,6 +46,19 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: var(--main-white);
+  overflow-x: hidden;
+
+}
+
+.intro {
+  font-size: 65px; /* Original font size */
+}
+
+.welcome-section>p {
+  font-size: 35px;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-blue);
 }
 
 h1,
@@ -91,7 +104,6 @@ img {
 
 .nav-list {
   display: flex;
-  margin-right: 2rem;
 }
 
 @media (max-width: 28.75em) {
@@ -105,13 +117,32 @@ img {
 
 .nav-list a {
   display: block;
-  font-size: 2.2rem;
+  font-size: 2rem;
   padding: 2rem;
+  color: black;
 }
 
 .nav-list a:hover {
   background: var(--main-red);
+  color: white;
 }
+
+#theme-toggle {
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: var(--main-red);
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 2rem;
+  color: white;
+}
+
+#theme-toggle:hover {
+  background: var(--main-red);
+  /* color: black; */
+}
+
 
 .welcome-section {
   display: flex;
@@ -122,17 +153,6 @@ img {
   height: 100vh;
   background-color: #000;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-}
-
-.welcome-section>p {
-  font-size: 35px;
-  font-weight: 200;
-  font-style: italic;
-  color: var(--main-blue);
-}
-
-.intro {
-  font-size: 65px;
 }
 
 .projects-section {
@@ -186,12 +206,6 @@ img {
 .project:hover .code {
   color: #ff7f50;
 }
-
-/* .project-image {
-  height: calc(100% - 6.8rem);
-  width: 100%;
-  object-fit: cover;
-} */
 
 .project-title {
   font-size: 2rem;
@@ -286,9 +300,51 @@ footer i {
   vertical-align: middle;
 }
 
+@media only screen and (max-width: 900px) {
+  .intro {
+    font-size: 5.5rem;
+  }
+  .welcome-section>p {
+    font-size: 3.7rem;
+  }
+  .contact-section-header>h2 {
+    font-size: 4.7rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .intro {
+    font-size: 4.7rem;
+  }
+  .welcome-section>p {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 100px) {
   footer {
       flex-direction: column;
       text-align: center;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .intro {
+    font-size: 4.7rem;
+  }
+  .welcome-section>p {
+    font-size: 3rem;
+  }
+  .contact-section-header>h2 {
+    font-size: 4.5rem;
+  }
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 2rem; 
+  }
+  .project {
+    max-width: calc(50% - 1rem);
   }
 }

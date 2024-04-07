@@ -37,18 +37,7 @@
             background-image: url("bg-pattern3.png");
         }
 
-        .bio-photo {
-            display: block;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            border: 5px solid #2D9596;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 400px;
-            width: 300px;
-        }
-
-        h2 {
-            
+        h2 {   
             text-align: center;
             background-color: #F1FADA;
             padding: 5px;
@@ -84,13 +73,6 @@
             width: calc(50% - 20px);
         }
 
-        .skill img {
-            width: 350px; 
-            height: 300px; 
-            border: 3px solid #008e9b;
-            border-radius: 15px;
-        }
-
         .skill-name {
             margin-top: 0;
             font-weight: bold;
@@ -100,6 +82,7 @@
             color: white;
             font-size: 18px;
         }
+
         .description {
             background-color: #e0ffe6;
             padding: 5px;
@@ -111,12 +94,46 @@
             border-color: #B67352;
             border-width: 3px;
         }
+
+        /* CSS for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .skill {
+                width: calc(50% - 20px);
+            }
+
+            .skill img {
+                width: 100%;
+                height: auto; 
+                max-width: 100%; 
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .skill {
+                width: 100%;
+            }
+
+            .skill img {
+                width: 100%; 
+                height: auto; 
+                max-width: 100%; 
+            }
+        }
+
+        .skill img {
+            width: 300px; 
+            height: 200px; 
+            object-fit: cover; 
+            border: 3px solid #008e9b;
+            border-radius: 15px;
+        }
+
+
     </style>
 </head>
 <body>
     <header>SKILLS</header>
     <div class="container">
-        <!-- <img class="bio-photo" src="biopicture.JPG" alt="Mohammad Ali Dimacaling"> -->
         <h2>The following are my technical & inter/intrapersonal skills.</h2>
         <div class="skills">
             <div class="skill">

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <title>My Personal Portfolio</title>
   </head>
@@ -17,7 +19,10 @@
           <a href="#contact">Contact</a>
         </li>
       </ul>
-    </nav>
+      <button id="theme-toggle">
+        <i class="fas fa-paint-brush"></i>Theme Colors
+      </button>
+    </nav>    
 
     <section id="welcome-section" class="welcome-section">
       <h1 class="intro">Hey! I am Mohammad Ali Dimacaling</h1>
@@ -51,18 +56,6 @@
             <span class="code">&#47;&gt;</span>
           </p>
         </a>
-        <!-- <a href="project/accomplishments.html" target="_blank" class="project project-tile">
-        <img
-          class="project-image"
-          src="images/hobby.png"
-          alt="project"
-        />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Accomplishments
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a> -->
         <a href="project/interests-hobbies.html" target="_blank" class="project project-tile">
           <img
             class="project-image"
@@ -74,31 +67,55 @@
           Interests & Hobbies
           <span class="code">&#47;&gt;</span>
         </p>
-      </a>
-        <a href="https://dimaxkun.github.io/dimaxkun.myrecipepage.io/" target="_blank" class="project project-tile">
+        </a>
+        <a href="project/resume.html" target="_blank" class="project project-tile">
           <img
-          class="project-image"
-          src="images/recipe.png"
-          alt="project"
-        />
+            class="project-image"
+            src="images/resume.png"
+            alt="project"
+          />
+            <p class="project-title">
+              <span class="code">&lt;</span>
+              Resume
+              <span class="code">&#47;&gt;</span>
+            </p>
+        </a>
+          <a href="https://dimaxkun.github.io/dimaxkun.myrecipepage.io/" target="_blank" class="project project-tile">
+            <img
+            class="project-image"
+            src="images/recipe.png"
+            alt="project"
+          />
+            <p class="project-title">
+              <span class="code">&lt;</span>
+              Recipe Book Page
+              <span class="code">&#47;&gt;</span>
+            </p>
+          </a>
+        <a href="project/Bebekeks_FlexboxChallenge.html" target="_blank" class="project project-tile">
+          <img
+            class="project-image"
+            src="images/flexbox.png"
+            alt="project"
+          />
           <p class="project-title">
             <span class="code">&lt;</span>
-            Recipe Book Page
+            Flexbox: Doraemon Wiki
             <span class="code">&#47;&gt;</span>
           </p>
         </a>
-      <a href="project/resume.html" target="_blank" class="project project-tile">
-    <img
-      class="project-image"
-      src="images/resume.png"
-      alt="project"
-    />
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        Resume
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
+        <a href="https://dimaxkun.github.io/dimaxkun.myanimesurvey.io/" target="_blank" class="project project-tile">
+          <img
+            class="project-image"
+            src="images/survey.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Responsive Survey
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
       </div>
     </section>
 
@@ -132,5 +149,34 @@
     <footer>
       <p> &copy; Created by Mohammad Ali Dimacaling</p>
     </footer>
+    
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+
+      themeToggle.addEventListener('click', function() {
+          const blueRed = generateRandomColor();
+          const red = blueRed.red;
+          const green = blueRed.green;
+          const blue = blueRed.blue;
+          const blueColor = `rgb(${red},${green},${blue})`;
+
+          const redRed = generateRandomColor();
+          const red2 = redRed.red;
+          const green2 = redRed.green;
+          const blue2 = redRed.blue;
+          const redColor = `rgb(${red2},${green2},${blue2})`;
+
+          root.style.setProperty('--main-blue', blueColor);
+          root.style.setProperty('--main-red', redColor);
+      });
+
+      function generateRandomColor() {
+          const red = Math.floor(Math.random() * 256); 
+          const green = Math.floor(Math.random() * 256); 
+          const blue = Math.floor(Math.random() * 256); 
+          return { red, green, blue };
+      }
+    </script>
   </body>
 </html>

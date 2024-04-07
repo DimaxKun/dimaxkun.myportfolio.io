@@ -11,7 +11,6 @@
             padding: 0;
             background-image: linear-gradient(to right, #9AD0C2, #265073);
         }
-
         header {
             background-color: #35374B; 
             color: white; 
@@ -25,7 +24,6 @@
             font-weight: bold;
             font-size: 25px;
         }
-
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -36,17 +34,17 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background-image: url("bg-pattern2.png");
         }
-
         .bio-photo {
             display: block;
             margin: 0 auto 20px;
             border-radius: 50%;
             border: 5px solid #2D9596;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 400px;
-            width: 300px;
+            max-width: 100%;
+            height: auto;
+            max-height: 350px; /* Limits image height */
+            width: auto;
         }
-
         h1 {
             text-align: center;
             background-color: #F1FADA;
@@ -56,7 +54,6 @@
             border-radius: 25px;
             border-color: #35374B;
         }
-
         h2 {
             background-color: #2D9596;
             color: white;
@@ -64,17 +61,13 @@
             border-radius: 5px;
             margin-top: 0;
         }
-
         ul {
-            /* list-style-type: none; */
             padding-left: 50px;
             font-weight: bold;
         }
-
         li {
             margin-bottom: 10px;
         }
-
         .section {
             margin-bottom: 20px;
             background-color: #F1FADA;
@@ -86,7 +79,32 @@
         .section:last-child {
             margin-bottom: 0;
         }
+        @media only screen and (max-width: 768px) {
+            .container {
+                padding: 10px; 
+            }
 
+            h1 {
+                margin: 0 20px 30px 20px;
+            }
+
+            ul {
+                padding-left: 50px;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .container {
+                padding: 5px;
+            }
+
+            h1 {
+                margin: 0 10px 30px 10px;
+            }
+
+            ul {
+                padding-left: 50px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,8 +120,6 @@
                 <li><h3>Senior High School:</h3> Science, Technology, Engineering, & Mathematics Strand <h4>University of the Cordilleras</h4></li>
                 <li><h3>Junior High School:</h3> San Vicente National High School</li>
                 <li><h3>Primary:</h3> San Vicente Elementary School</li>
-                <!-- <li>University of the Cordilleras</li>
-                <li>Governor Pack Road, Baguio City</li> -->
             </ul>
         </div>
         <div class="section">
