@@ -1,7 +1,7 @@
 :root {
   --main-white: #f0f0f0;
-  --main-red: #00203FFF;
-  --main-blue: #ADEFD1FF;
+  --main-red: #F2AA4CFF;
+  --main-blue: #1e5394;
   --main-gray: #303841;
 }
 
@@ -52,12 +52,16 @@ body {
 
 .intro {
   font-size: 65px;
+  color: var(--main-red);
 }
 
 .welcome-section>p {
   font-size: 35px;
   font-weight: 200;
   font-style: italic;
+}
+
+.projects-section>h2{
   color: var(--main-blue);
 }
 
@@ -119,12 +123,12 @@ img {
   display: block;
   font-size: 2rem;
   padding: 2rem;
-  color: black;
+  color: white;
 }
 
 .nav-list a:hover {
   background: var(--main-red);
-  color: white;
+  color: black;
 }
 
 #theme-toggle {
@@ -134,7 +138,7 @@ img {
   background: var(--main-red);
   cursor: pointer;
   font-size: 2rem;
-  color: white;
+  color: black;
   padding-right: 20px;
 }
 
@@ -162,7 +166,7 @@ img {
 .projects-section-header {
   max-width: 500px;
   margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid var(--main-white);
+  border-bottom: 0.2rem solid var(--main-blue);
 }
 
 @media (max-width: 28.75em) {
@@ -287,7 +291,7 @@ footer {
   justify-content: space-evenly;
   padding: 2rem;
   background: var(--main-gray);
-  border-top: 4px solid var(--main-blue);
+  border-top: 4px solid var(--main-red);
 }
 
 footer>p {
