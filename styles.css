@@ -17,7 +17,7 @@
 }
 
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 62.5%;
 }
@@ -51,7 +51,7 @@ body {
 }
 
 .intro {
-  font-size: 65px; /* Original font size */
+  font-size: 65px;
 }
 
 .welcome-section>p {
@@ -134,15 +134,13 @@ img {
   background: var(--main-red);
   cursor: pointer;
   font-size: 2rem;
-  padding: 2rem;
   color: white;
+  padding-right: 20px;
 }
 
 #theme-toggle:hover {
   background: var(--main-red);
-  /* color: black; */
 }
-
 
 .welcome-section {
   display: flex;
